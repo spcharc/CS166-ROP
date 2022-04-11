@@ -1,4 +1,4 @@
-== CS166 Team Project
+## CS166 Team Project
 
 Requires x64 Linux system.
 
