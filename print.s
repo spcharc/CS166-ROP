@@ -9,7 +9,7 @@
 .text
 print_newline:
     # ()
-    pushq $2561      # 0x0a01 = byte 1, 10, 0, 0, .....
+    pushq $2561                        # 0x0a01 = byte 1, 10, 0, 0, .....
 
     movq %rsp, %rdi
     callq print
@@ -96,11 +96,11 @@ conv_s64:
 
     callq conv_u64
 
-    movb (%rax), %dl   # get counter
-    movb $45, (%rax)   # add neg sign
-    incb %dl           # inc counter
-    decq %rax          # mov ptr
-    movb %dl, (%rax)   # put counter back
+    movb (%rax), %dl                   # get counter
+    movb $45, (%rax)                   # add neg sign
+    incb %dl                           # inc counter
+    decq %rax                          # mov ptr
+    movb %dl, (%rax)                   # put counter back
 
     addq $8, %rsp
     retq

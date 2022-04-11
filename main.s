@@ -17,11 +17,10 @@ str4:  # used by "you_should_never_call_this()"
 # =============================================================================
 .text
 _start:
-    subq $8, %rsp
+    subq $8, %rsp                      # align the stack for function calls
 
     callq func
 
-exit:
     movq $60, %rax
     xorq %rdi, %rdi
     syscall
